@@ -292,3 +292,1889 @@ main{
 .grid{
   display:grid;
   grid
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Geechee.World | Charleston Streetwear</title>
+
+<meta name="description"
+content="Shop Geechee.World — Charleston streetwear, TRUCHARLESTAFARIAN, Port City Hustlers Club, hats, hoodies, sneakers and Lowcountry gear.">
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+:root{
+  --black:#070707;
+  --black2:#101010;
+  --black3:#171717;
+  --gold:#d6ae45;
+  --gold2:#f0cf73;
+  --white:#ffffff;
+  --gray:#aaa;
+  --green:#0b8c4a;
+  --red:#b91d27;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--black);
+  color:var(--white);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.5;
+}
+
+/* TOP BAR */
+.topbar{
+  background:var(--gold);
+  color:#000;
+  text-align:center;
+  padding:8px 10px;
+  font-weight:900;
+  font-size:12px;
+  letter-spacing:1px;
+}
+
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(7,7,7,.96);
+  border-bottom:1px solid #292929;
+  backdrop-filter:blur(12px);
+}
+
+.nav{
+  max-width:1300px;
+  margin:auto;
+  padding:14px 18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+}
+
+.logo{
+  text-decoration:none;
+  color:white;
+  font-size:22px;
+  font-weight:1000;
+  letter-spacing:1px;
+}
+
+.logo span{
+  color:var(--gold);
+}
+
+.nav-right{
+  display:flex;
+  gap:8px;
+}
+
+.nav-btn{
+  color:white;
+  background:#181818;
+  border:1px solid #333;
+  text-decoration:none;
+  padding:9px 13px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:800;
+}
+
+.nav-btn:hover{
+  border-color:var(--gold);
+  color:var(--gold);
+}
+
+/* HERO */
+.hero{
+  min-height:72vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:70px 20px;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 20% 25%,rgba(185,29,39,.28),transparent 28%),
+    radial-gradient(circle at 80% 30%,rgba(11,140,74,.25),transparent 30%),
+    radial-gradient(circle at 50% 90%,rgba(214,174,69,.20),transparent 36%),
+    linear-gradient(145deg,#050505,#151515);
+}
+
+.hero:before{
+  content:"843";
+  position:absolute;
+  font-size:45vw;
+  font-weight:1000;
+  color:rgba(255,255,255,.015);
+  line-height:1;
+}
+
+.hero-inner{
+  position:relative;
+  z-index:2;
+  max-width:900px;
+}
+
+.eyebrow{
+  display:inline-block;
+  border:1px solid var(--gold);
+  color:var(--gold);
+  border-radius:30px;
+  padding:6px 14px;
+  font-size:11px;
+  letter-spacing:2px;
+  font-weight:900;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:clamp(46px,10vw,104px);
+  line-height:.9;
+  text-transform:uppercase;
+  font-weight:1000;
+  letter-spacing:-4px;
+}
+
+.hero h1 span{
+  color:var(--gold);
+}
+
+.hero p{
+  max-width:680px;
+  margin:22px auto;
+  color:#ccc;
+  font-size:16px;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.big-btn{
+  padding:14px 22px;
+  border-radius:5px;
+  text-decoration:none;
+  font-weight:1000;
+  font-size:13px;
+  letter-spacing:.6px;
+}
+
+.primary{
+  background:var(--gold);
+  color:#000;
+}
+
+.secondary{
+  border:1px solid #555;
+  color:#fff;
+  background:#111;
+}
+
+/* BRAND STRIP */
+.brand-strip{
+  border-top:1px solid #222;
+  border-bottom:1px solid #222;
+  background:#0d0d0d;
+  overflow:hidden;
+}
+
+.brand-scroll{
+  display:flex;
+  gap:45px;
+  padding:15px 20px;
+  justify-content:center;
+  flex-wrap:wrap;
+  color:#bdbdbd;
+  font-weight:900;
+  font-size:12px;
+  letter-spacing:1px;
+}
+
+.brand-scroll strong{
+  color:var(--gold);
+}
+
+/* CONTENT */
+main{
+  max-width:1350px;
+  margin:auto;
+  padding:45px 16px 80px;
+}
+
+.section-head{
+  margin-bottom:25px;
+}
+
+.section-head small{
+  color:var(--gold);
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+.section-head h2{
+  font-size:clamp(28px,6vw,48px);
+  margin-top:4px;
+}
+
+/* SEARCH */
+.tools{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:13px;
+  margin-bottom:28px;
+}
+
+.search{
+  flex:1;
+  min-width:220px;
+  border:1px solid #333;
+  background:#111;
+  color:white;
+  padding:14px 16px;
+  border-radius:7px;
+  outline:none;
+  font-size:15px;
+}
+
+.search:focus{
+  border-color:var(--gold);
+}
+
+.filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+
+.filter{
+  background:#141414;
+  border:1px solid #333;
+  color:#ddd;
+  padding:10px 13px;
+  border-radius:20px;
+  cursor:pointer;
+  font-weight:800;
+  font-size:11px;
+}
+
+.filter.active,
+.filter:hover{
+  background:var(--gold);
+  border-color:var(--gold);
+  color:black;
+}
+
+/* PRODUCT GRID */
+.grid{
+  display:grid;
+  grid
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Geechee.World | Charleston Streetwear</title>
+
+<meta name="description"
+content="Shop Geechee.World — Charleston streetwear, TRUCHARLESTAFARIAN, Port City Hustlers Club, hats, hoodies, sneakers and Lowcountry gear.">
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+:root{
+  --black:#070707;
+  --black2:#101010;
+  --black3:#171717;
+  --gold:#d6ae45;
+  --gold2:#f0cf73;
+  --white:#ffffff;
+  --gray:#aaa;
+  --green:#0b8c4a;
+  --red:#b91d27;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--black);
+  color:var(--white);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.5;
+}
+
+/* TOP BAR */
+.topbar{
+  background:var(--gold);
+  color:#000;
+  text-align:center;
+  padding:8px 10px;
+  font-weight:900;
+  font-size:12px;
+  letter-spacing:1px;
+}
+
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(7,7,7,.96);
+  border-bottom:1px solid #292929;
+  backdrop-filter:blur(12px);
+}
+
+.nav{
+  max-width:1300px;
+  margin:auto;
+  padding:14px 18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+}
+
+.logo{
+  text-decoration:none;
+  color:white;
+  font-size:22px;
+  font-weight:1000;
+  letter-spacing:1px;
+}
+
+.logo span{
+  color:var(--gold);
+}
+
+.nav-right{
+  display:flex;
+  gap:8px;
+}
+
+.nav-btn{
+  color:white;
+  background:#181818;
+  border:1px solid #333;
+  text-decoration:none;
+  padding:9px 13px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:800;
+}
+
+.nav-btn:hover{
+  border-color:var(--gold);
+  color:var(--gold);
+}
+
+/* HERO */
+.hero{
+  min-height:72vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:70px 20px;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 20% 25%,rgba(185,29,39,.28),transparent 28%),
+    radial-gradient(circle at 80% 30%,rgba(11,140,74,.25),transparent 30%),
+    radial-gradient(circle at 50% 90%,rgba(214,174,69,.20),transparent 36%),
+    linear-gradient(145deg,#050505,#151515);
+}
+
+.hero:before{
+  content:"843";
+  position:absolute;
+  font-size:45vw;
+  font-weight:1000;
+  color:rgba(255,255,255,.015);
+  line-height:1;
+}
+
+.hero-inner{
+  position:relative;
+  z-index:2;
+  max-width:900px;
+}
+
+.eyebrow{
+  display:inline-block;
+  border:1px solid var(--gold);
+  color:var(--gold);
+  border-radius:30px;
+  padding:6px 14px;
+  font-size:11px;
+  letter-spacing:2px;
+  font-weight:900;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:clamp(46px,10vw,104px);
+  line-height:.9;
+  text-transform:uppercase;
+  font-weight:1000;
+  letter-spacing:-4px;
+}
+
+.hero h1 span{
+  color:var(--gold);
+}
+
+.hero p{
+  max-width:680px;
+  margin:22px auto;
+  color:#ccc;
+  font-size:16px;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.big-btn{
+  padding:14px 22px;
+  border-radius:5px;
+  text-decoration:none;
+  font-weight:1000;
+  font-size:13px;
+  letter-spacing:.6px;
+}
+
+.primary{
+  background:var(--gold);
+  color:#000;
+}
+
+.secondary{
+  border:1px solid #555;
+  color:#fff;
+  background:#111;
+}
+
+/* BRAND STRIP */
+.brand-strip{
+  border-top:1px solid #222;
+  border-bottom:1px solid #222;
+  background:#0d0d0d;
+  overflow:hidden;
+}
+
+.brand-scroll{
+  display:flex;
+  gap:45px;
+  padding:15px 20px;
+  justify-content:center;
+  flex-wrap:wrap;
+  color:#bdbdbd;
+  font-weight:900;
+  font-size:12px;
+  letter-spacing:1px;
+}
+
+.brand-scroll strong{
+  color:var(--gold);
+}
+
+/* CONTENT */
+main{
+  max-width:1350px;
+  margin:auto;
+  padding:45px 16px 80px;
+}
+
+.section-head{
+  margin-bottom:25px;
+}
+
+.section-head small{
+  color:var(--gold);
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+.section-head h2{
+  font-size:clamp(28px,6vw,48px);
+  margin-top:4px;
+}
+
+/* SEARCH */
+.tools{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:13px;
+  margin-bottom:28px;
+}
+
+.search{
+  flex:1;
+  min-width:220px;
+  border:1px solid #333;
+  background:#111;
+  color:white;
+  padding:14px 16px;
+  border-radius:7px;
+  outline:none;
+  font-size:15px;
+}
+
+.search:focus{
+  border-color:var(--gold);
+}
+
+.filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+
+.filter{
+  background:#141414;
+  border:1px solid #333;
+  color:#ddd;
+  padding:10px 13px;
+  border-radius:20px;
+  cursor:pointer;
+  font-weight:800;
+  font-size:11px;
+}
+
+.filter.active,
+.filter:hover{
+  background:var(--gold);
+  border-color:var(--gold);
+  color:black;
+}
+
+/* PRODUCT GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.card{
+  background:var(--black2);
+  border:1px solid #262626;
+  border-radius:10px;
+  overflow:hidden;
+  transition:.25s;
+  display:flex;
+  flex-direction:column;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border-color:#6d5a27;
+  box-shadow:0 12px 40px rgba(0,0,0,.4);
+}
+
+.product-art{
+  aspect-ratio:1/1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 30% 20%,rgba(214,174,69,.20),transparent 30%),
+    linear-gradient(140deg,#202020,#080808);
+}
+
+.product-art:after{
+  content:"GEECEE.WORLD";
+  position:absolute;
+  bottom:10px;
+  font-size:9px;
+  letter-spacing:3px;
+  color:#777;
+}
+
+.product-art .art-text{
+  font-size:clamp(20px,4vw,38px);
+  font-weight:1000;
+  line-height:.9;
+  color:#fff;
+  text-transform:uppercase;
+}
+
+.product-art .art-text span{
+  color:var(--gold);
+}
+
+.badge{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:var(--gold);
+  color:#000;
+  border-radius:4px;
+  padding:5px 8px;
+  font-size:9px;
+  font-weight:1000;
+  letter-spacing:.5px;
+}
+
+.card-info{
+  padding:14px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+
+.brand{
+  font-size:9px;
+  color:var(--gold);
+  letter-spacing:1.3px;
+  text-transform:uppercase;
+  font-weight:900;
+  margin-bottom:5px;
+}
+
+.card h3{
+  font-size:15px;
+  line-height:1.25;
+  min-height:38px;
+}
+
+.price{
+  color:white;
+  font-size:17px;
+  font-weight:1000;
+  margin:10px 0 13px;
+}
+
+.shop-btn{
+  margin-top:auto;
+  display:block;
+  text-align:center;
+  background:var(--gold);
+  color:#080808;
+  font-weight:1000;
+  text-decoration:none;
+  padding:11px;
+  border-radius:5px;
+  font-size:12px;
+}
+
+.shop-btn:hover{
+  background:var(--gold2);
+}
+
+/* CHARLESTON SECTION */
+.charleston{
+  margin-top:65px;
+  border:1px solid #292929;
+  border-radius:14px;
+  padding:45px 25px;
+  text-align:center;
+  background:
+    radial-gradient(circle at center,rgba(214,174,69,.1),transparent 50%),
+    #101010;
+}
+
+.charleston h2{
+  font-size:clamp(30px,7vw,60px);
+}
+
+.charleston h2 span{
+  color:var(--gold);
+}
+
+.charleston p{
+  max-width:700px;
+  margin:13px auto 23px;
+  color:#aaa;
+}
+
+/* FOOTER */
+footer{
+  border-top:1px solid #262626;
+  padding:45px 18px;
+  text-align:center;
+  background:#050505;
+}
+
+.footer-logo{
+  font-size:26px;
+  font-weight:1000;
+}
+
+.footer-logo span{
+  color:var(--gold);
+}
+
+footer p{
+  color:#777;
+  margin-top:8px;
+  font-size:12px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:16px;
+  margin:20px 0;
+}
+
+.footer-links a{
+  color:#aaa;
+  text-decoration:none;
+  font-size:12px;
+}
+
+.footer-links a:hover{
+  color:var(--gold);
+}
+
+.no-results{
+  display:none;
+  text-align:center;
+  color:#999;
+  padding:60px 10px;
+  font-size:18px;
+}
+
+@media(max-width:1000px){
+  .grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+@media(max-width:750px){
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:11px;
+  }
+
+  .nav-right .hide-mobile{
+    display:none;
+  }
+
+  .hero{
+    min-height:62vh;
+  }
+
+  .hero h1{
+    letter-spacing:-2px;
+  }
+
+  main{
+    padding-left:11px;
+    padding-right:11px;
+  }
+}
+
+@media(max-width:390px){
+  .card h3{
+    font-size:13px;
+  }
+
+  .price{
+    font-size:15px;
+  }
+
+  .card-info{
+    padding:11px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+CHARLESTON, SOUTH CAROLINA • ROOTS • CULTURE • UNITY • LIFESTYLE
+</div>
+
+<header>
+  <div class="nav">
+
+    <a class="logo" href="#">
+      GEECEE<span>.WORLD</span>
+    </a>
+
+    <div class="nav-right">
+      <a class="nav-btn hide-mobile" href="#shop">SHOP</a>
+      <a class="nav-btn"
+         href="https://geecheeworld.bigcartel.com/products"
+         target="_blank">
+         CHECKOUT ↗
+      </a>
+    </div>
+
+  </div>
+</header>
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div class="eyebrow">
+      BORN IN CHARLESTON • 843
+    </div>
+
+    <h1>
+      WEAR<br>
+      <span>WHERE</span><br>
+      YOU'RE FROM
+    </h1>
+
+    <p>
+      Charleston streetwear with roots. Shop TRUCHARLESTAFARIAN,
+      Port City Hustlers Club, Geechee Gucci, Millio™ and
+      Geechee.World gear.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="#shop" class="big-btn primary">
+        SHOP THE COLLECTION
+      </a>
+
+      <a href="https://geecheeworld.bigcartel.com"
+         target="_blank"
+         class="big-btn secondary">
+        VISIT ORIGINAL SHOP ↗
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<div class="brand-strip">
+  <div class="brand-scroll">
+
+    <span><strong>TRU</strong>CHARLESTAFARIAN</span>
+    <span>PORT CITY HUSTLERS CLUB</span>
+    <span>GEECEE.WORLD</span>
+    <span>GEECEE GUCCI</span>
+    <span>MILLIO™</span>
+    <span>CHARLESTON • 843</span>
+
+  </div>
+</div>
+
+<main id="shop">
+
+  <div class="section-head">
+    <small>THE GEECEE.WORLD SHOP</small>
+    <h2>Charleston's Own.</h2>
+  </div>
+
+  <div class="tools">
+
+    <input
+      id="search"
+      class="search"
+      type="search"
+      placeholder="Search hoodies, hats, PCHC, Tru, shoes..."
+    >
+
+    <div class="filters">
+
+      <button class="filter active" data-filter="all">
+        ALL
+      </button>
+
+      <button class="filter" data-filter="hoodie">
+        HOODIES
+      </button>
+
+      <button class="filter" data-filter="shirt">
+        TEES
+      </button>
+
+      <button class="filter" data-filter="hat">
+        HATS
+      </button>
+
+      <button class="filter" data-filter="shoe">
+        SHOES
+      </button>
+
+      <button class="filter" data-filter="women">
+        WOMEN
+      </button>
+
+      <button class="filter" data-filter="kids">
+        KIDS
+      </button>
+
+      <button class="filter" data-filter="gear">
+        GEAR
+      </button>
+
+    </div>
+  </div>
+
+  <div class="grid" id="productGrid">
+
+    <!-- 1 -->
+    <article class="card"
+      data-category="hoodie tru"
+      data-search="trucharlestafarian heavyweight hoodie tru">
+
+      <div class="product-art">
+        <span class="badge">FEATURED</span>
+        <div class="art-text">
+          TRU<br><span>CHARLESTON</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">TRUCHARLESTAFARIAN</div>
+        <h3>TRUCHARLESTAFARIAN Heavyweight Hoodie</h3>
+        <div class="price">$53.50 – $58.00</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/product/oversized-heavyweight-hoodie"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 2 -->
+    <article class="card"
+      data-category="hat pchc"
+      data-search="reversible bucket hat pchc port city hustlers club">
+
+      <div class="product-art">
+        <div class="art-text">
+          PCHC<br><span>BUCKET</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">PORT CITY HUSTLERS CLUB</div>
+        <h3>Reversible Bucket Hat PCHC</h3>
+        <div class="price">$28.50 – $31.50</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 3 -->
+    <article class="card"
+      data-category="shoe women"
+      data-search="women slip on canvas shoes chs chew charleston">
+
+      <div class="product-art">
+        <div class="art-text">
+          CHS<br><span>CHEW</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">CHARLESTON COLLECTION</div>
+        <h3>Women’s Slip-On Canvas Shoes CHS Chew</h3>
+        <div class="price">$53.50</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 4 -->
+    <article class="card"
+      data-category="hat"
+      data-search="5 panel cap hat">
+
+      <div class="product-art">
+        <div class="art-text">
+          843<br><span>CAP</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">GEECEE.WORLD</div>
+        <h3>5 Panel Cap</h3>
+        <div class="price">$25.00</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 5 -->
+    <article class="card"
+      data-category="women gear"
+      data-search="knitted crew neck sweater hot girl women">
+
+      <div class="product-art">
+        <div class="art-text">
+          HOT<br><span>GIRL</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">GEECEE.WORLD</div>
+        <h3>Knitted Crew Neck Sweater — Hot Girl</h3>
+        <div class="price">$55.50 – $60.00</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 6 -->
+    <article class="card"
+      data-category="women"
+      data-search="tie strap midi dress women">
+
+      <div class="product-art">
+        <div class="art-text">
+          LOWCOUNTRY<br><span>LUXE</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">WOMEN'S COLLECTION</div>
+        <h3>Tie-Strap Midi Dress</h3>
+        <div class="price">$45.50 – $48.50</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/product/tie-strap-midi-dress"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 7 -->
+    <article class="card"
+      data-category="shirt"
+      data-search="mens box tee iconic tshirt shirt">
+
+      <div class="product-art">
+        <div class="art-text">
+          ICONIC<br><span>™</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">ICONIC</div>
+        <h3>Men’s Box Tee Iconic™</h3>
+        <div class="price">$33.45 – $39.45</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 8 -->
+    <article class="card"
+      data-category="gear"
+      data-search="unisex fleece sweatpants iconic brand pants">
+
+      <div class="product-art">
+        <div class="art-text">
+          ICONIC<br><span>SWEATS</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">ICONIC</div>
+        <h3>Unisex Fleece Sweatpants Iconic Brand</h3>
+        <div class="price">$38.00 – $40.50</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 9 -->
+    <article class="card"
+      data-category="hat pchc"
+      data-search="bucket hat portcity hc pchc">
+
+      <div class="product-art">
+        <div class="art-text">
+          PORT<br><span>CITY</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">PCHC</div>
+        <h3>Bucket Hat PortCity HC</h3>
+        <div class="price">$19.50</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 10 -->
+    <article class="card"
+      data-category="kids hoodie"
+      data-search="kids eco hoodie young money children">
+
+      <div class="product-art">
+        <div class="art-text">
+          YOUNG<br><span>MONEY</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">YOUTH COLLECTION</div>
+        <h3>Kids Eco Hoodie — Young Money</h3>
+        <div class="price">$30.50</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 11 -->
+    <article class="card"
+      data-category="shirt"
+      data-search="unisex ringer tshirt tee">
+
+      <div class="product-art">
+        <div class="art-text">
+          GEECEE<br><span>RINGER</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">GEECEE.WORLD</div>
+        <h3>Unisex Ringer T-Shirt</h3>
+        <div class="price">$21.33 – $24.63</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 12 -->
+    <article class="card"
+      data-category="gear"
+      data-search="scented soy candle candle">
+
+      <div class="product-art">
+        <div class="art-text">
+          843<br><span>VIBES</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">HOME & LIFESTYLE</div>
+        <h3>Scented Soy Candle</h3>
+        <div class="price">$12.50</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 13 -->
+    <article class="card"
+      data-category="gear"
+      data-search="mens fleece shorts geechee mix">
+
+      <div class="product-art">
+        <div class="art-text">
+          GEECEE<br><span>MIX</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">GEECEE.WORLD</div>
+        <h3>Men's Fleece Shorts — Geechee Mix</h3>
+        <div class="price">$30.50 – $37.00</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 14 -->
+    <article class="card"
+      data-category="shirt pchc"
+      data-search="unisex oversized tshirt port city hustlers club pchc tee">
+
+      <div class="product-art">
+        <span class="badge">PCHC</span>
+        <div class="art-text">
+          PORT CITY<br><span>HUSTLERS</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">PORT CITY HUSTLERS CLUB</div>
+        <h3>Unisex Oversized T-Shirt PCHC</h3>
+        <div class="price">$23.02 – $26.32</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/product/unisex-oversized-t-shirt-port-city-hustlers-club"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 15 -->
+    <article class="card"
+      data-category="hoodie pchc"
+      data-search="unisex hoodie hustlers club pchc port city">
+
+      <div class="product-art">
+        <div class="art-text">
+          HUSTLERS<br><span>CLUB</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">PCHC</div>
+        <h3>Unisex Hoodie — Hustlers Club</h3>
+        <div class="price">$42.50 – $46.00</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 16 -->
+    <article class="card"
+      data-category="kids shirt"
+      data-search="youth tshirt kids children">
+
+      <div class="product-art">
+        <div class="art-text">
+          YOUNG<br><span>843</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">YOUTH COLLECTION</div>
+        <h3>Youth T-Shirt</h3>
+        <div class="price">$16.19</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 17 -->
+    <article class="card"
+      data-category="hat"
+      data-search="reversible geechee gucci hat">
+
+      <div class="product-art">
+        <span class="badge">GEECEE GUCCI</span>
+        <div class="art-text">
+          GEECEE<br><span>GUCCI</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">GEECEE GUCCI</div>
+        <h3>Reversible Geechee Gucci Hat</h3>
+        <div class="price">$30.00</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 18 -->
+    <article class="card"
+      data-category="shoe"
+      data-search="mens high top canvas shoes geechee gucci sneakers">
+
+      <div class="product-art">
+        <div class="art-text">
+          GEECEE<br><span>GUCCI</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">GEECEE GUCCI</div>
+        <h3>Men’s High Top Canvas Shoes — Geechee Gucci</h3>
+        <div class="price">$56.00</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 19 -->
+    <article class="card"
+      data-category="hoodie"
+      data-search="unisex champion hoodie">
+
+      <div class="product-art">
+        <div class="art-text">
+          CHAMPION<br><span>843</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">GEECEE.WORLD</div>
+        <h3>Unisex Champion Hoodie</h3>
+        <div class="price">$58.00 – $62.00</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 20 -->
+    <article class="card"
+      data-category="gear"
+      data-search="crossbody bag geechee gucci">
+
+      <div class="product-art">
+        <div class="art-text">
+          GEECEE<br><span>BAG</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">GEECEE GUCCI</div>
+        <h3>Crossbody Bag — Geechee Gucci</h3>
+        <div class="price">$29.50</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 21 -->
+    <article class="card"
+      data-category="women shoe"
+      data-search="womens high top canvas shoes tribal sneakers">
+
+      <div class="product-art">
+        <div class="art-text">
+          TRIBAL<br><span>HIGH TOP</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">WOMEN'S COLLECTION</div>
+        <h3>Women’s High Top Canvas Shoes — Tribal</h3>
+        <div class="price">$56.00</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 22 -->
+    <article class="card"
+      data-category="shirt tru"
+      data-search="unisex organic cotton tshirt vintage tru">
+
+      <div class="product-art">
+        <div class="art-text">
+          VINTAGE<br><span>TRU</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">TRUCHARLESTAFARIAN</div>
+        <h3>Unisex Organic Cotton T-Shirt — Vintage</h3>
+        <div class="price">$22.75 – $27.75</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 23 -->
+    <article class="card"
+      data-category="hoodie tru"
+      data-search="unisex trucharlestafarian hoodie tru charlestafarian">
+
+      <div class="product-art">
+        <span class="badge">TRU</span>
+        <div class="art-text">
+          TRU<br><span>843</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">TRUCHARLESTAFARIAN</div>
+        <h3>Unisex TRUCHARLESTAFARIAN Hoodie</h3>
+        <div class="price">$45.50 – $50.50</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 24 -->
+    <article class="card"
+      data-category="hoodie tru"
+      data-search="3 birds trucharlestafarian hoodie charleston">
+
+      <div class="product-art">
+        <span class="badge">3 BIRDS</span>
+        <div class="art-text">
+          THREE<br><span>BIRDS</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">TRUCHARLESTAFARIAN</div>
+        <h3>Unisex 3 Birds TRU CHARLESTAFARIAN</h3>
+        <div class="price">$62.50 – $64.50</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/product/unisex-3birds-tru-charlestafarian"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 25 -->
+    <article class="card"
+      data-category="women hoodie tru"
+      data-search="crop hoodie 3 lil birds tru women">
+
+      <div class="product-art">
+        <div class="art-text">
+          3 LIL<br><span>BIRDS</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">TRUCHARLESTAFARIAN</div>
+        <h3>Crop Hoodie — 3 Lil Birds</h3>
+        <div class="price">$41.00 – $46.00</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 26 -->
+    <article class="card"
+      data-category="shoe"
+      data-search="mens slides millio footwear">
+
+      <div class="product-art">
+        <span class="badge">MILLIO™</span>
+        <div class="art-text">
+          MILLIO<br><span>SLIDES</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">MILLIO™</div>
+        <h3>Men’s Slides — Millio™</h3>
+        <div class="price">$31.50</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/product/men-s-slides-millio"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 27 -->
+    <article class="card"
+      data-category="hoodie tru"
+      data-search="unisex champion hoodie tc trucharlestafarian">
+
+      <div class="product-art">
+        <div class="art-text">
+          TC<br><span>CHAMPION</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">TRUCHARLESTAFARIAN</div>
+        <h3>Unisex Champion Hoodie TC</h3>
+        <div class="price">$46.50 – $51.50</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 28 -->
+    <article class="card"
+      data-category="hoodie pchc"
+      data-search="unisex eco raglan hoodie eastside east side">
+
+      <div class="product-art">
+        <div class="art-text">
+          EAST<br><span>SIDE</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">PORT CITY COLLECTION</div>
+        <h3>Unisex Eco Raglan Hoodie — Eastside</h3>
+        <div class="price">$42.00 – $46.00</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 29 -->
+    <article class="card"
+      data-category="hoodie tru"
+      data-search="unisex tru raglan hoodie">
+
+      <div class="product-art">
+        <div class="art-text">
+          TRU<br><span>RAGLAN</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">TRUCHARLESTAFARIAN</div>
+        <h3>Unisex Tru Raglan Hoodie</h3>
+        <div class="price">$54.50 – $57.50</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 30 -->
+    <article class="card"
+      data-category="women hoodie tru"
+      data-search="crop hoodie embroidered tc">
+
+      <div class="product-art">
+        <div class="art-text">
+          TC<br><span>EMBROIDERED</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">TRUCHARLESTAFARIAN</div>
+        <h3>Crop Hoodie — Embroidered TC</h3>
+        <div class="price">$56.50 – $59.00</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+
+    <!-- 31 -->
+    <article class="card"
+      data-category="shirt pchc"
+      data-search="unisex organic cotton pchc tee tshirt">
+
+      <div class="product-art">
+        <div class="art-text">
+          PCHC<br><span>ORGANIC</span>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="brand">PORT CITY HUSTLERS CLUB</div>
+        <h3>Unisex Organic Cotton PCHC</h3>
+        <div class="price">$23.75 – $26.50</div>
+
+        <a class="shop-btn"
+           href="https://geecheeworld.bigcartel.com/products"
+           target="_blank">
+           SHOP NOW ↗
+        </a>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="no-results" id="noResults">
+    No products found. Try another search.
+  </div>
+
+
+  <section class="charleston">
+
+    <h2>
+      MADE FOR <span>CHARLESTON.</span>
+    </h2>
+
+    <p>
+      From the peninsula to North Charleston, West Ashley and
+      the Lowcountry — Geechee.World brings Charleston culture
+      into streetwear built for locals, visitors and everybody
+      who respects the roots.
+    </p>
+
+    <a href="https://geecheeworld.bigcartel.com/products"
+       target="_blank"
+       class="big-btn primary">
+       VIEW FULL CATALOG ↗
+    </a>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-logo">
+    GEECEE<span>.WORLD</span>
+  </div>
+
+  <p>
+    Charleston, South Carolina • 843
+  </p>
+
+  <div class="footer-links">
+
+    <a href="https://geecheeworld.bigcartel.com/products"
+       target="_blank">
+       Shop
+    </a>
+
+    <a href="https://geecheeworld.bigcartel.com/contact"
+       target="_blank">
+       Contact
+    </a>
+
+    <a href="https://geecheeworld.bigcartel.com"
+       target="_blank">
+       Big Cartel
+    </a>
+
+  </div>
+
+  <p>
+    © 2026 Geechee.World. All rights reserved.
+  </p>
+
+</footer>
+
+
+<script>
+const search = document.getElementById("search");
+const cards = [...document.querySelectorAll(".card")];
+const filters = document.querySelectorAll(".filter");
+const noResults = document.getElementById("noResults");
+
+let activeFilter = "all";
+
+function updateProducts(){
+
+  const term = search.value
+    .toLowerCase()
+    .trim();
+
+  let visible = 0;
+
+  cards.forEach(card => {
+
+    const searchText =
+      (
+        card.dataset.search +
+        " " +
+        card.innerText
+      ).toLowerCase();
+
+    const categories =
+      card.dataset.category
+      .toLowerCase();
+
+    const matchesSearch =
+      searchText.includes(term);
+
+    const matchesFilter =
+      activeFilter === "all" ||
+      categories.includes(activeFilter);
+
+    if(matchesSearch && matchesFilter){
+
+      card.style.display = "flex";
+      visible++;
+
+    }else{
+
+      card.style.display = "none";
+
+    }
+
+  });
+
+  noResults.style.display =
+    visible === 0
+    ? "block"
+    : "none";
+}
+
+
+search.addEventListener(
+  "input",
+  updateProducts
+);
+
+
+filters.forEach(button => {
+
+  button.addEventListener(
+    "click",
+    () => {
+
+      filters.forEach(btn =>
+        btn.classList.remove("active")
+      );
+
+      button.classList.add("active");
+
+      activeFilter =
+        button.dataset.filter;
+
+      updateProducts();
+
+    }
+  );
+
+});
+</script>
+
+</body>
+</html>
