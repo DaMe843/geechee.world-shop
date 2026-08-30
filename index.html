@@ -2,433 +2,293 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Geechee.World | Charleston Culture & Streetwear</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Geechee.World | Charleston Streetwear</title>
+
+<meta name="description"
+content="Shop Geechee.World — Charleston streetwear, TRUCHARLESTAFARIAN, Port City Hustlers Club, hats, hoodies, sneakers and Lowcountry gear.">
 
 <style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+:root{
+  --black:#070707;
+  --black2:#101010;
+  --black3:#171717;
+  --gold:#d6ae45;
+  --gold2:#f0cf73;
+  --white:#ffffff;
+  --gray:#aaa;
+  --green:#0b8c4a;
+  --red:#b91d27;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
-margin:0;
-font-family:Arial,Helvetica,sans-serif;
-background:#090909;
-color:white;
+  background:var(--black);
+  color:var(--white);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.5;
 }
 
+/* TOP BAR */
+.topbar{
+  background:var(--gold);
+  color:#000;
+  text-align:center;
+  padding:8px 10px;
+  font-weight:900;
+  font-size:12px;
+  letter-spacing:1px;
+}
+
+/* HEADER */
 header{
-background:#050505;
-border-bottom:3px solid #d4af37;
-position:sticky;
-top:0;
-z-index:50;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(7,7,7,.96);
+  border-bottom:1px solid #292929;
+  backdrop-filter:blur(12px);
 }
 
-.top{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:14px;
-max-width:1200px;
-margin:auto;
+.nav{
+  max-width:1300px;
+  margin:auto;
+  padding:14px 18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
 }
 
 .logo{
-font-size:25px;
-font-weight:900;
-letter-spacing:1px;
-color:#d4af37;
+  text-decoration:none;
+  color:white;
+  font-size:22px;
+  font-weight:1000;
+  letter-spacing:1px;
 }
 
-.logo span{color:white}
-
-.cart{
-background:#d4af37;
-color:#000;
-padding:9px 13px;
-border-radius:20px;
-font-weight:bold;
-cursor:pointer;
+.logo span{
+  color:var(--gold);
 }
 
+.nav-right{
+  display:flex;
+  gap:8px;
+}
+
+.nav-btn{
+  color:white;
+  background:#181818;
+  border:1px solid #333;
+  text-decoration:none;
+  padding:9px 13px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:800;
+}
+
+.nav-btn:hover{
+  border-color:var(--gold);
+  color:var(--gold);
+}
+
+/* HERO */
 .hero{
-min-height:420px;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:35px 20px;
-background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.9)),
-linear-gradient(135deg,#351010,#111 45%,#17351c);
+  min-height:72vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:70px 20px;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 20% 25%,rgba(185,29,39,.28),transparent 28%),
+    radial-gradient(circle at 80% 30%,rgba(11,140,74,.25),transparent 30%),
+    radial-gradient(circle at 50% 90%,rgba(214,174,69,.20),transparent 36%),
+    linear-gradient(145deg,#050505,#151515);
+}
+
+.hero:before{
+  content:"843";
+  position:absolute;
+  font-size:45vw;
+  font-weight:1000;
+  color:rgba(255,255,255,.015);
+  line-height:1;
+}
+
+.hero-inner{
+  position:relative;
+  z-index:2;
+  max-width:900px;
+}
+
+.eyebrow{
+  display:inline-block;
+  border:1px solid var(--gold);
+  color:var(--gold);
+  border-radius:30px;
+  padding:6px 14px;
+  font-size:11px;
+  letter-spacing:2px;
+  font-weight:900;
+  margin-bottom:18px;
 }
 
 .hero h1{
-font-size:clamp(38px,9vw,76px);
-margin:0;
-line-height:.95;
-text-transform:uppercase;
+  font-size:clamp(46px,10vw,104px);
+  line-height:.9;
+  text-transform:uppercase;
+  font-weight:1000;
+  letter-spacing:-4px;
 }
 
-.gold{color:#d4af37}
+.hero h1 span{
+  color:var(--gold);
+}
 
 .hero p{
-max-width:650px;
-margin:20px auto;
-color:#ddd;
-font-size:17px;
-line-height:1.5;
+  max-width:680px;
+  margin:22px auto;
+  color:#ccc;
+  font-size:16px;
 }
 
-.shopbtn{
-display:inline-block;
-background:#d4af37;
-color:#000;
-padding:14px 25px;
-border-radius:6px;
-font-weight:bold;
-text-decoration:none;
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
 }
 
-.section{
-max-width:1200px;
-margin:auto;
-padding:35px 15px;
+.big-btn{
+  padding:14px 22px;
+  border-radius:5px;
+  text-decoration:none;
+  font-weight:1000;
+  font-size:13px;
+  letter-spacing:.6px;
 }
 
-.section h2{
-font-size:30px;
-margin-bottom:5px;
+.primary{
+  background:var(--gold);
+  color:#000;
 }
 
-.sub{
-color:#aaa;
-margin-top:0;
+.secondary{
+  border:1px solid #555;
+  color:#fff;
+  background:#111;
 }
 
-.categories{
-display:flex;
-gap:10px;
-overflow-x:auto;
-padding:10px 0 20px;
+/* BRAND STRIP */
+.brand-strip{
+  border-top:1px solid #222;
+  border-bottom:1px solid #222;
+  background:#0d0d0d;
+  overflow:hidden;
 }
 
-.categories button{
-border:1px solid #555;
-background:#151515;
-color:white;
-padding:11px 17px;
-border-radius:25px;
-white-space:nowrap;
-cursor:pointer;
+.brand-scroll{
+  display:flex;
+  gap:45px;
+  padding:15px 20px;
+  justify-content:center;
+  flex-wrap:wrap;
+  color:#bdbdbd;
+  font-weight:900;
+  font-size:12px;
+  letter-spacing:1px;
 }
 
-.categories button:hover{
-background:#d4af37;
-color:black;
+.brand-scroll strong{
+  color:var(--gold);
+}
+
+/* CONTENT */
+main{
+  max-width:1350px;
+  margin:auto;
+  padding:45px 16px 80px;
+}
+
+.section-head{
+  margin-bottom:25px;
+}
+
+.section-head small{
+  color:var(--gold);
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+.section-head h2{
+  font-size:clamp(28px,6vw,48px);
+  margin-top:4px;
+}
+
+/* SEARCH */
+.tools{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:13px;
+  margin-bottom:28px;
 }
 
 .search{
-width:100%;
-padding:14px;
-background:#171717;
-border:1px solid #444;
-color:white;
-border-radius:7px;
-font-size:16px;
-margin-bottom:20px;
+  flex:1;
+  min-width:220px;
+  border:1px solid #333;
+  background:#111;
+  color:white;
+  padding:14px 16px;
+  border-radius:7px;
+  outline:none;
+  font-size:15px;
 }
 
+.search:focus{
+  border-color:var(--gold);
+}
+
+.filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+
+.filter{
+  background:#141414;
+  border:1px solid #333;
+  color:#ddd;
+  padding:10px 13px;
+  border-radius:20px;
+  cursor:pointer;
+  font-weight:800;
+  font-size:11px;
+}
+
+.filter.active,
+.filter:hover{
+  background:var(--gold);
+  border-color:var(--gold);
+  color:black;
+}
+
+/* PRODUCT GRID */
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(155px,1fr));
-gap:15px;
-}
-
-.product{
-background:#151515;
-border:1px solid #292929;
-border-radius:10px;
-overflow:hidden;
-transition:.2s;
-}
-
-.product:hover{
-transform:translateY(-4px);
-border-color:#d4af37;
-}
-
-.pic{
-height:180px;
-display:flex;
-align-items:center;
-justify-content:center;
-background:linear-gradient(135deg,#252525,#0b0b0b);
-font-size:55px;
-}
-
-.info{padding:13px}
-
-.brand{
-font-size:11px;
-color:#d4af37;
-font-weight:bold;
-text-transform:uppercase;
-}
-
-.product h3{
-font-size:16px;
-margin:6px 0;
-}
-
-.price{
-font-weight:bold;
-font-size:18px;
-margin:8px 0;
-}
-
-.buy{
-width:100%;
-border:0;
-background:#d4af37;
-color:#000;
-padding:11px;
-font-weight:bold;
-border-radius:5px;
-cursor:pointer;
-}
-
-.banner{
-background:#d4af37;
-color:#000;
-text-align:center;
-padding:30px 15px;
-}
-
-.banner h2{
-margin:0 0 8px;
-font-size:30px;
-}
-
-footer{
-background:#030303;
-border-top:1px solid #333;
-padding:35px 20px;
-text-align:center;
-color:#aaa;
-}
-
-footer strong{
-color:#d4af37;
-font-size:20px;
-}
-
-#notice{
-position:fixed;
-bottom:20px;
-left:50%;
-transform:translateX(-50%);
-background:white;
-color:black;
-padding:12px 20px;
-border-radius:25px;
-display:none;
-z-index:100;
-font-weight:bold;
-}
-
-@media(min-width:700px){
-.grid{grid-template-columns:repeat(4,1fr)}
-.pic{height:240px}
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<div class="top">
-<div class="logo">GEECHEE<span>.WORLD</span></div>
-<div class="cart">🛒 CART <span id="count">0</span></div>
-</div>
-</header>
-
-<section class="hero">
-<div>
-<h1>CHARLESTON<br><span class="gold">WEAR IT.</span></h1>
-
-<p>
-Authentic Charleston-inspired streetwear, culture and Lowcountry style.
-Built for natives, visitors and everybody who carries Charleston with them.
-</p>
-
-<a class="shopbtn" href="#shop">SHOP CHARLESTON →</a>
-</div>
-</section>
-
-<section class="section" id="shop">
-
-<h2>Shop Geechee.World</h2>
-<p class="sub">Charleston culture. Local style. Affordable gear.</p>
-
-<input
-class="search"
-id="search"
-placeholder="Search shirts, Charleston gear, PCHC..."
-onkeyup="searchProducts()">
-
-<div class="categories">
-<button onclick="filterProducts('all')">ALL</button>
-<button onclick="filterProducts('charleston')">CHARLESTON</button>
-<button onclick="filterProducts('tru')">TRUCHARLESTAFARIAN</button>
-<button onclick="filterProducts('pchc')">PCHC</button>
-<button onclick="filterProducts('shirt')">T-SHIRTS</button>
-<button onclick="filterProducts('hat')">HATS</button>
-</div>
-
-<div class="grid" id="products">
-
-<div class="product" data-cat="charleston shirt">
-<div class="pic">🌴</div>
-<div class="info">
-<div class="brand">Geechee.World</div>
-<h3>Charleston 843 Tee</h3>
-<div class="price">$24.99</div>
-<button class="buy" onclick="addCart()">ADD TO CART</button>
-</div>
-</div>
-
-<div class="product" data-cat="tru shirt">
-<div class="pic">🦁</div>
-<div class="info">
-<div class="brand">TRUCHARLESTAFARIAN</div>
-<h3>Roots Culture Unity Tee</h3>
-<div class="price">$29.99</div>
-<button class="buy" onclick="addCart()">ADD TO CART</button>
-</div>
-</div>
-
-<div class="product" data-cat="pchc shirt">
-<div class="pic">💰</div>
-<div class="info">
-<div class="brand">Port City Hustlers Club</div>
-<h3>PCHC Port City Tee</h3>
-<div class="price">$27.99</div>
-<button class="buy" onclick="addCart()">ADD TO CART</button>
-</div>
-</div>
-
-<div class="product" data-cat="charleston shirt">
-<div class="pic">🌙</div>
-<div class="info">
-<div class="brand">Geechee.World</div>
-<h3>SC Palmetto Tee</h3>
-<div class="price">$22.99</div>
-<button class="buy" onclick="addCart()">ADD TO CART</button>
-</div>
-</div>
-
-<div class="product" data-cat="charleston shirt">
-<div class="pic">🌉</div>
-<div class="info">
-<div class="brand">Charleston Collection</div>
-<h3>Holy City Bridge Tee</h3>
-<div class="price">$24.99</div>
-<button class="buy" onclick="addCart()">ADD TO CART</button>
-</div>
-</div>
-
-<div class="product" data-cat="pchc hat">
-<div class="pic">🧢</div>
-<div class="info">
-<div class="brand">PCHC</div>
-<h3>Port City 843 Cap</h3>
-<div class="price">$24.99</div>
-<button class="buy" onclick="addCart()">ADD TO CART</button>
-</div>
-</div>
-
-<div class="product" data-cat="tru shirt">
-<div class="pic">👑</div>
-<div class="info">
-<div class="brand">TRUCHARLESTAFARIAN</div>
-<h3>Charleston King Tee</h3>
-<div class="price">$29.99</div>
-<button class="buy" onclick="addCart()">ADD TO CART</button>
-</div>
-</div>
-
-<div class="product" data-cat="charleston shirt">
-<div class="pic">🏝️</div>
-<div class="info">
-<div class="brand">Lowcountry</div>
-<h3>Lowcountry Native Tee</h3>
-<div class="price">$24.99</div>
-<button class="buy" onclick="addCart()">ADD TO CART</button>
-</div>
-</div>
-
-</div>
-</section>
-
-<section class="banner">
-<h2>MORE THAN A BRAND.</h2>
-<b>IT'S A MOVEMENT.</b>
-<p>Roots • Culture • Unity • Lifestyle</p>
-</section>
-
-<footer>
-<strong>GEECHEE.WORLD</strong>
-
-<p>
-Charleston, South Carolina<br>
-Gullah-Geechee inspired culture & streetwear
-</p>
-
-<p>© 2026 Geechee.World. All rights reserved.</p>
-</footer>
-
-<div id="notice">Added to cart ✓</div>
-
-<script>
-let cart=0;
-
-function addCart(){
-cart++;
-document.getElementById("count").innerText=cart;
-
-let n=document.getElementById("notice");
-n.style.display="block";
-
-setTimeout(()=>{
-n.style.display="none";
-},1200);
-}
-
-function filterProducts(cat){
-let products=document.querySelectorAll(".product");
-
-products.forEach(p=>{
-if(cat==="all" || p.dataset.cat.includes(cat)){
-p.style.display="block";
-}else{
-p.style.display="none";
-}
-});
-}
-
-function searchProducts(){
-let value=document.getElementById("search").value.toLowerCase();
-let products=document.querySelectorAll(".product");
-
-products.forEach(p=>{
-let text=p.innerText.toLowerCase();
-
-p.style.display=
-text.includes(value) ? "block":"none";
-});
-}
-</script>
-
-</body>
-</html>
+  display:grid;
+  grid
